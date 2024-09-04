@@ -1,0 +1,13 @@
+Primeiro Passo: pip install flask flask_httpauth hashlib sqlite3 datetime json
+Segundo Passo: rodar o arquivo quiz.sql para criar o schema (usando uma conexão com a base quiz.db com usuario root (default))
+Terceiro Passo: criar um arquivo users.csv e colocar o nome e tipo do seu usuario separados por um virugla
+Quarto Passo: rodar adduser.py para criar o usuario com o nome e tipo escolhidos
+Quinto Passo: rodar python softdes.py
+Sexto Passo: abrir pagina onde o flask roda suas aplicacoes num browser (default: 127.0.0.1) e fazer login usando username escolhido e username como senha (default)
+Setimo Passo: se necessario, trocar a senha
+
+OBS: Gerenciador da base de dados é sqlite3. As tabelas usadas sao USER, QUIZ e USERQUIZ. A autenticação da aplicação é feita com usuário e senha e tem usuário administrador, mas não sabemos quais as diferenças entre os tipos. As senhas são asseguradas por criptografia MD5.
+Arquivos .py rodados no formato (python [arquivo.py])
+
+A aplicação serve para envio, prazo e feedback de quiz. Ela tambem permite troca de senha, login e logout.
+O tipo escolhido na hora de criar o usuario na tabela .csv determina as permissoes daquele usuario. Portanto, alunos e professores devem usar o tipo correspondente a suas funcoes.
